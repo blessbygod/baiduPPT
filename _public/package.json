@@ -1,0 +1,28 @@
+{
+    "name": "baiduPPT",
+    "version": "1.0.0",
+    "author": "senli",
+    "main": "main/main.html",
+    "window":{
+        "icon": "",
+        "toolbar": false,
+        "frame": true,
+        "position": "center",
+        "resizable": false,
+        "width":  1280,
+        "height": 800
+    },
+    "webkit":{
+        "plugin": true
+    },
+    "repository": {},
+    "dependencies": {
+      "underscore": "*",
+      "uuid": "*",
+      "request": "*",
+      "detector": "*"
+    }
+}
+
+
+

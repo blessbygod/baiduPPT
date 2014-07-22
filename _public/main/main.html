@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="李森" />
+  <title>前端技术分享</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="reveal.js/css/reveal.min.css"/>
+    <style type="text/css">code{white-space: pre;}</style>
+    <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+  <link rel="stylesheet" media="print" href="reveal.js/css/print/pdf.css" />
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">前端技术分享</h1>
+    <h2 class="author">李森</h2>
+    <h3 class="date">Email: lisen04@baidu.com</h3>
+</section>
+
+<section><section id="hybrid-app-framework" class="titleslide slide level1"><h1>Hybrid App Framework</h1></section><section id="node-webkit" class="slide level2">
+<h1>node-webkit</h1>
+<ul>
+<li>nodejs + chromium(webkit内核)</li>
+<li><pre><code>hex      javascript  有道词典  
+Qt       c++         Battle.net(Blizzard)  
+wxPython python  </code></pre></li>
+</ul>
+</section><section class="slide level2">
+
+<h3 id="node.js-简介">Node.js 简介</h3>
+<ul>
+<li>单线程非阻塞, 异步编程的语言<br /></li>
+<li><p>javascript/v8</p>
+<p>目前性能最高的js引擎<br />http://www.xuanfengge.com/why-v8-so-fast.html</p></li>
+</ul>
+</section><section class="slide level2">
+
+<h3 id="chromium-简介">Chromium 简介</h3>
+<ul>
+<li>Google公司开发的网页浏览器，是开源的, 吸引开发者贡献代码， 特性首先出现在该版本上, 更新非常快<br /></li>
+<li><p>Chrome则是在Chromium的基础上开发的版本，不是开源的(dev, beta, stable)</p>
+<p>沙盒特性，V8引擎</p></li>
+</ul>
+</section><section class="slide level2">
+
+</section></section>
+<section><section id="node-webkit-介绍" class="titleslide slide level1"><h1>node-webkit 介绍</h1></section><section class="slide level2">
+
+<h3 id="node-webkit-的优点">node-webkit 的优点</h3>
+<ul>
+<li>开发简单，易维护，基于Web(HTML + CSS + Javascript)开发方式</li>
+<li>跨平台 (grunt-node-webkit-builder实现各平台打包)</li>
+<li>nodejs的丰富的第三方库和社区支持(大部分项目均在github.com)(issue 管理, patch 管理)</li>
+<li>非常方面的控制台调试</li>
+</ul>
+</section><section class="slide level2">
+
+<h3 id="node-webkit-的一些桌面特性">node-webkit 的一些桌面特性</h3>
+<ul>
+<li>在线音视频(webRTC)</li>
+<li>自定义窗口</li>
+<li>系统菜单、托盘、(桌面提醒)</li>
+<li>文件系统输入/输出流</li>
+<li>snapshot(文件快照，项目文件存档)</li>
+<li>WebSocket</li>
+<li>CSS3, HTML5, Drag&amp;Drop, WebGL, FileDialogs</li>
+</ul>
+</section><section class="slide level2">
+
+<h3 id="node-webkit-基于开发并发布的项目">node-webkit 基于开发并发布的项目</h3>
+<ul>
+<li><p>1 nodewebkit-qq</p></li>
+<li><p>2 Game Dev Tycoon (游戏开发巨头)</p></li>
+<li><p>3 Light Table (DEV IDE, http://www.lighttable.com/)</p>
+<p>https://github.com/rogerwang/node-webkit/wiki/List-of-apps-and-companies-using-node-webkit</p></li>
+</ul>
+</section><section id="nodejs-的其他应用" class="slide level2">
+<h1>NodeJs 的其他应用</h1>
+<ul>
+<li><p>Haraka - SMTP Server (邮件服务器)</p></li>
+<li><p>Pomelo - Game Framework (nio)</p></li>
+</ul>
+</section><section class="slide level2">
+
+</section></section>
+<section><section id="baidu" class="titleslide slide level1"><h1><img src="images/baidu_logo.gif" alt="baidu" /></h1></section><section id="谢谢大家" class="slide level2">
+<h1>谢谢大家！</h1>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.min.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+]});
+    </script>
+  </body>
+</html>

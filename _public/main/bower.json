@@ -1,0 +1,9 @@
+{
+  "name": "heartstone_bower",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "~1.9",
+    "underscore": "*",
+    "highcharts": "*"
+  }
+}
