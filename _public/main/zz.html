@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="李森" />
+  <title>转正述职</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="reveal.js/css/reveal.min.css"/>
+    <style type="text/css">code{white-space: pre;}</style>
+    <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+  <link rel="stylesheet" media="print" href="reveal.js/css/print/pdf.css" />
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">转正述职</h1>
+    <h2 class="author">李森</h2>
+    <h3 class="date">Email: lisen04@baidu.com</h3>
+</section>
+
+<section><section id="百度云加速yjs" class="titleslide slide level1"><h1>百度云加速<img src="http://static-fhl-rd.baidu.com/static/app/images/logo-w.png" alt="yjs" /></h1></section><section id="前端项目重构" class="slide level3">
+<h1>前端项目重构</h1>
+<ul>
+<li>旧： django模板（后台渲染模板，数据由django的model支持)</li>
+<li>新： backbone 前端MVC(前端渲染模板， 数据通过restful风格的API支持)</li>
+</ul>
+</section><section id="为什么重构" class="slide level3">
+<h1>为什么重构?</h1>
+<ul>
+<li>前后端分离, 旧版本前端和后端耦合严重</li>
+<li>独立的域名 static_fhl.baidu.com , 利于请求分流<br /></li>
+<li>独立的项目 (http://gitlab.baidu.com/fenghuolun/website-fe)</li>
+<li>独立的部署方案 (grunt 部署管理代码规范检查，单元测试，压缩，部署版本)</li>
+</ul>
+</section><section id="用户体验优化" class="slide level3">
+<h1>用户体验优化</h1>
+<ul>
+<li>window.onload 的响应时间由之前的1.4s ~ 2s+ 多提高到现在的200ms~600ms左右</li>
+<li>新设计的界面和交互方案</li>
+</ul>
+</section><section id="界面优化细节" class="slide level3">
+<h1>界面优化细节</h1>
+<ul>
+<li>添加网站步骤1、2、3， 明确引导用户</li>
+<li>去除了干扰用户焦点的弹出框(添加网站，添加编辑子域名DNS管理属性等)</li>
+<li>统计报表根据请求数的范围自动更正Y轴单位等</li>
+<li>加入用户IP节点地图新元素</li>
+<li>子域名虚拟进度条</li>
+<li>用户剪贴板，复制长文本</li>
+</ul>
+</section><section class="slide level3">
+
+</section></section>
+<section><section id="项目架构" class="titleslide slide level1"><h1>项目架构</h1></section><section id="前端模块化" class="slide level3">
+<h1>前端模块化</h1>
+<ul>
+<li>前端文件模块化管理(js， css， tpl) <img src="http://requirejs.org/i/logo.png" alt="requirejs" /></li>
+<li>前端MVC(业务数据对象，视图层，url分发) <img src="http://cdn.code.baidu.com/imgs/backbone.js.png" alt="backbone" /></li>
+<li>css模块化 <img src="http://sass-lang.com/assets/img/logos/logo-235e394c.png" alt="sass" /></li>
+</ul>
+</section><section id="其他前端库" class="slide level3">
+<h1>其他前端库</h1>
+<ul>
+<li>简化DOM操作 <img src="http://cdn.code.baidu.com/imgs/jquery.png" alt="jquery" /></li>
+<li>工具库 <img src="http://cdn.code.baidu.com/imgs/underscore.js.png" alt="underscore" /></li>
+<li>统计报表工具 <img src="http://echarts.baidu.com/doc/asset/img/echarts-logo.png" alt="echarts" /></li>
+</ul>
+</section><section id="开发优化细节" class="slide level3">
+<h1>开发优化细节</h1>
+<ul>
+<li>利用跨域资源共享(CORS)， 使前端模板开发很方便(前提是不支持IE6-7, hack了requirejs-text)</li>
+<li>统计报表页面可视化加载， 模块化统计报表，后期可支持用户自定义的dashboard.</li>
+<li>子域名管理分页、排序、搜索 通过backbone.Router对象完美支持刷新保持状态</li>
+<li>版本管理的部署优化 grunt build:<a href="major.minor.bugfix">版本号</a> 多个可选参数快速部署版本</li>
+</ul>
+</section></section>
+<section><section id="baidu" class="titleslide slide level1"><h1><img src="images/baidu_logo.gif" alt="baidu" /></h1></section><section><section id="谢谢大家" class="titleslide slide level2"><h1>谢谢大家！</h1></section></section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.min.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+]});
+    </script>
+  </body>
+</html>
